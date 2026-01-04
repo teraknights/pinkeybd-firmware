@@ -1,0 +1,15 @@
+#include "pinkeybd.dtsi"
+
+/ {
+    trackball: trackball {
+        status = "disabled";
+    };
+
+    xiao_serial { 
+        status = "disabled";
+    };
+};
+
+&left_encoder {
+    status = "okay";
+};

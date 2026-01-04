@@ -1,0 +1,12 @@
+file_format: "1"
+id: pinkeybd
+name: pinkeybd
+type: shield
+url: https://codeberg.org/dkmorimoto/zmk-config-pinkeybd
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+  - pointer
+siblings:
+  - pinkeybd_left
+  - pinkeybd_right

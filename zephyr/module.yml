@@ -1,0 +1,4 @@
+name: Pinkeybd
+build:
+  settings:
+    board_root: .
