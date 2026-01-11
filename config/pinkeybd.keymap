@@ -31,7 +31,7 @@
 &kp Q      &kp W                      &kp E        &kp R      &kp T     &kp LEFT_WIN    &kp Y             &kp U            &kp I         &kp O       &kp P
 &kp A      &kp S                      &kp D        &kp F      &kp G     &kp SCROLLLOCK  &kp H             &kp J            &kp K         &kp L       &kp MINUS
 &kp Z      &kp X                      &kp C        &kp V      &kp B     &kp LEFT_ALT    &kp N             &kp M            &kp COMMA     &kp PERIOD  &kp SLASH
-&kp LCTRL  &mt LEFT_SHIFT LANGUAGE_1  &lt 1 SPACE  &lt 3 TAB  &mkp MB1  &kp ENTER       &lt 2 LANGUAGE_2  &lt 3 BACKSPACE  &lt 5 ESCAPE
+&kp LCTRL  &mt LEFT_SHIFT LANGUAGE_2  &lt 1 SPACE  &lt 3 TAB  &mkp MB1  &kp ENTER       &lt 2 LANGUAGE_1  &lt 3 BACKSPACE  &lt 5 ESCAPE
             >;
 
             sensor-bindings = <&rot_kp PG_DN PG_UP>;
@@ -46,10 +46,10 @@
 
         Symbol_layer {
             bindings = <
-&kp RS(MINUS)  &kp RS(NUMBER_4)  &kp RS(NUMBER_6)     &kp CARET          &kp SLASH       &trans          &kp RS(N7)        &kp RS(RBKT)  &kp RS(NUHS)  &kp RS(COMMA)            &kp RS(PERIOD)
-&kp AT         &kp LS(NUMBER_3)  &kp RS(N5)           &kp RS(SEMICOLON)  &kp UNDERSCORE  &kp SCROLLLOCK  &kp RS(NUMBER_2)  &kp RS(N8)    &kp RS(N9)    &kp SEMICOLON            &kp SQT
-&kp RS(LBKT)   &kp RS(EQUAL)     &kp INTERNATIONAL_3  &kp EXCLAMATION    &kp MINUS       &trans          &kp RS(COLON)     &kp RBKT      &kp NUHS      &kp RS(INTERNATIONAL_3)  &kp RS(SLASH)
-&trans         &trans            &trans               &trans             &trans          &kp DELETE      &trans            &trans        &trans
+&kp RS(MINUS)  &kp RS(NUMBER_4)  &kp RS(NUMBER_6)     &kp EQUAL          &kp SLASH                &trans          &kp RS(N7)        &kp RS(RBKT)  &kp RS(NUHS)  &kp RS(COMMA)            &kp RS(PERIOD)
+&kp LBKT       &kp LS(NUMBER_3)  &kp RS(N5)           &kp RS(SEMICOLON)  &kp RS(INTERNATIONAL_1)  &kp SCROLLLOCK  &kp RS(NUMBER_2)  &kp RS(N8)    &kp RS(N9)    &kp SEMICOLON            &kp SQT
+&kp RS(LBKT)   &kp RS(EQUAL)     &kp INTERNATIONAL_3  &kp EXCLAMATION    &kp MINUS                &trans          &kp LS(SQT)       &kp RBKT      &kp NUHS      &kp RS(INTERNATIONAL_3)  &kp RS(SLASH)
+&trans         &trans            &trans               &trans             &trans                   &kp DELETE      &trans            &trans        &trans
             >;
         };
 
