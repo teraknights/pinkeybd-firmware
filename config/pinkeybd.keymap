@@ -46,10 +46,10 @@
 
         Symbol_layer {
             bindings = <
-&kp EQUAL         &kp DOLLAR     &kp AMPERSAND  &kp EQUAL        &kp DOUBLE_QUOTES  &trans          &kp SQT            &kp RS(LEFT_BRACKET)  &kp RS(RIGHT_BRACKET)  &kp RS(COMMA)      &kp RS(RBKT)
-&kp LS(NUMBER_2)  &kp HASH       &kp PERCENT    &kp RS(EQUAL)    &kp RS(MINUS)      &kp SCROLLLOCK  &kp DOUBLE_QUOTES  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON      &kp RS(SEMICOLON)
-&kp GRAVE         &kp RS(GRAVE)  &kp BACKSLASH  &kp EXCLAMATION  &kp MINUS          &trans          &kp RS(APOS)       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp RS(BACKSLASH)  &kp RS(SLASH)
-&trans            &trans         &trans         &trans           &trans             &kp DELETE      &trans             &trans                &trans
+&kp RS(MINUS)  &kp RS(NUMBER_4)  &kp RS(NUMBER_6)     &kp CARET          &kp SLASH       &trans          &kp RS(N7)        &kp RS(RBKT)  &kp RS(NUHS)  &kp RS(COMMA)            &kp RS(PERIOD)
+&kp AT         &kp LS(NUMBER_3)  &kp RS(N5)           &kp RS(SEMICOLON)  &kp UNDERSCORE  &kp SCROLLLOCK  &kp RS(NUMBER_2)  &kp RS(N8)    &kp RS(N9)    &kp SEMICOLON            &kp SQT
+&kp RS(LBKT)   &kp RS(EQUAL)     &kp INTERNATIONAL_3  &kp EXCLAMATION    &kp MINUS       &trans          &kp RS(COLON)     &kp RBKT      &kp NUHS      &kp RS(INTERNATIONAL_3)  &kp RS(SLASH)
+&trans         &trans            &trans               &trans             &trans          &kp DELETE      &trans            &trans        &trans
             >;
         };
 
