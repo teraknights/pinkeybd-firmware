@@ -54,7 +54,7 @@
 
 &zip_temp_layer { // to AML
     excluded-positions = <
-        38 // ENTER
+        6 // `Y`
         28 // CLICK
         16 // Scroll
     >;
