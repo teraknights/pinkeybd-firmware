@@ -52,6 +52,15 @@
     };
 };
 
+&zip_temp_layer { // to AML
+    excluded-positions = <
+        38 // ENTER
+        28 // CLICK
+        16 // Scroll
+    >;
+    require-prior-idle-ms = <200>; //キー入力から一定時間はAMLを発動しない
+};
+
 / {
     trackball_listener {
         status="okay";
