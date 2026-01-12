@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
 #include <dt-bindings/input/input-event-codes.h>
+#include <input/processors.dtsi>
 
 // The matrix transform for this board is 6 columns over because the left half is 5 columns wide according to the matrix.
 &default_transform {
@@ -47,7 +48,7 @@
         //evt-type = <INPUT_EV_REL>;
         //x-input-code = <INPUT_REL_X>;
         //y-input-code = <INPUT_REL_Y>;
-        automouse-layer = <4>;
+        //automouse-layer = <4>;
     };
 };
 
@@ -56,5 +57,7 @@
         status="okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
+
+        input-processors = <&zip_temp_layer 4 10000>; // to AML
     };
 };
