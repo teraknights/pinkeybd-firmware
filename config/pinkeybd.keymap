@@ -103,7 +103,7 @@
 &trans  &trans  &trans  &none  &mkp MB1  &mkp MB1  &trans    &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>;
+            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
         // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
