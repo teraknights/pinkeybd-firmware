@@ -54,8 +54,10 @@
 
 &zip_temp_layer { // to AML
     excluded-positions = <
-        6 // `Y`
-        28 // CLICK
+        6 // 'Y'
+        17 // 'H'
+        37 // CLICK
+        38 // ENTER
         16 // Scroll
     >;
     require-prior-idle-ms = <200>; //キー入力から一定時間はAMLを発動しない
