@@ -37,7 +37,7 @@
 &kp LCTRL  &mt LEFT_SHIFT LANGUAGE_2  &lt 1 SPACE  &lt 3 TAB  &mkp MB1  &kp ENTER       &lt 2 LANGUAGE_1  &kp BACKSPACE  &lt 5 ESCAPE
             >;
 
-            sensor-bindings = <&rot_kp PAGE_DOWN PG_UP>, <&msc SCRL_UP>;
+            sensor-bindings = <&rot_kp PAGE_DOWN PG_UP>;
         };
 
         // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
