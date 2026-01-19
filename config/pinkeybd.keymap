@@ -19,10 +19,12 @@
         };
 
         mouse_wheel: mouse_wheel {
-            compatible = "zmk,behavior-sensor-rotate";
+            compatible = "zmk,behavior-sensor-rotate-var";
             label = "MOUSE_WHEEL";
-            #sensor-binding-cells = <0>;
-            bindings = <&mmv MOVE_UP>, <&mmv MOVE_DOWN>;
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+
+            tap-ms = <2>;
         };
     };
 
@@ -44,7 +46,7 @@
 &kp LCTRL  &mt LEFT_SHIFT LANGUAGE_2  &lt 1 SPACE  &kp LEFT_ALT  &mo 2  &kp ENTER       &kp BACKSPACE  &kp LANGUAGE_1  &lt 5 ESCAPE
             >;
 
-            sensor-bindings = <&mouse_wheel>;
+            sensor-bindings = <&mouse_wheel SCRL_UP SCRL_DOWN>;
         };
 
         // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
