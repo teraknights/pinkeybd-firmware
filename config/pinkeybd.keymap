@@ -106,10 +106,10 @@
 
         automouse_layer {
             bindings = <
-&none   &none   &none   &none  &none     &trans    &mkp MB2  &none   &none   &none  &none
-&none   &none   &none   &none  &none     &trans    &mkp MB2  &none   &none   &none  &none
-&none   &none   &none   &none  &none     &trans    &none     &none   &none   &none  &none
-&trans  &trans  &trans  &none  &mkp MB1  &mkp MB1  &trans    &trans  &trans
+&none   &none   &none   &none  &none  &trans    &mkp MB2  &none   &none   &none  &none
+&none   &none   &none   &none  &none  &trans    &none     &none   &none   &none  &none
+&none   &none   &none   &none  &none  &trans    &none     &none   &none   &none  &none
+&trans  &trans  &trans  &none  &none  &mkp MB1  &trans    &trans  &trans
             >;
         };
 
