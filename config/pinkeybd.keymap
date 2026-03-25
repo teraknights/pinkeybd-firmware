@@ -61,7 +61,7 @@
 &kp RS(MINUS)  &kp RS(NUMBER_4)  &kp RS(NUMBER_6)     &kp EQUAL          &kp SLASH                &trans          &kp RS(N7)        &kp RS(RBKT)  &kp RS(NUHS)  &kp RS(COMMA)            &kp RS(PERIOD)
 &kp LBKT       &kp LS(NUMBER_3)  &kp RS(N5)           &kp RS(SEMICOLON)  &kp RS(INTERNATIONAL_1)  &kp SCROLLLOCK  &kp RS(NUMBER_2)  &kp RS(N8)    &kp RS(N9)    &kp SEMICOLON            &kp SQT
 &kp RS(LBKT)   &kp RS(EQUAL)     &kp INTERNATIONAL_3  &kp EXCLAMATION    &kp MINUS                &trans          &kp LS(SQT)       &kp RBKT      &kp NUHS      &kp RS(INTERNATIONAL_3)  &kp RS(SLASH)
-&trans         &trans            &trans               &trans             &trans                   &kp DELETE      &trans            &trans        &trans
+&trans         &trans            &trans               &trans             &trans                   &kp DELETE      &trans            &kp DELETE    &trans
             >;
         };
 
@@ -122,10 +122,10 @@
 
         Bt_layer {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5  &none  &none       &none  &bt BT_CLR  &bt BT_CLR_ALL
-&bt BT_SEL 0  &bt BT_SEL 4  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none         &none  &bt BT_PRV  &none  &bt BT_NXT  &none
-&bt BT_CLR    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none         &none         &none  &none       &none  &none       &none
-&none         &none         &none         &none         &none         &none         &none  &none       &none
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &none  &none       &none  &bt BT_CLR  &bt BT_CLR_ALL
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &none  &bt BT_PRV  &none  &bt BT_NXT  &none
+&bt BT_CLR    &none         &none         &none         &none         &none  &none  &none       &none  &none       &none
+&none         &none         &none         &none         &none         &none  &none  &none       &none
             >;
         };
     };
