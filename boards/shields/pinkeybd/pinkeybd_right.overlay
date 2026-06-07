@@ -3,6 +3,7 @@
 #include <physical_layouts.dtsi>
 #include <dt-bindings/input/input-event-codes.h>
 #include <input/processors.dtsi>
+#include <dt-bindings/zmk/pointing.h>
 
 // The matrix transform for this board is 6 columns over because the left half is 5 columns wide according to the matrix.
 &default_transform {
