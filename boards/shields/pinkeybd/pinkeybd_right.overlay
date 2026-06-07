@@ -9,66 +9,35 @@
     row-offset = <6>;
 };
 
-&pinctrl {
-    spi0_default: spi0_default {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 5)>, //SCLK
-                    <NRF_PSEL(SPIM_MOSI, 0, 4)>, //SDIO
-                    <NRF_PSEL(SPIM_MISO, 0, 4)>; //SDIO
-        };
-    };
-
-    spi0_sleep: spi0_sleep {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 5)>, //SCLK
-                    <NRF_PSEL(SPIM_MOSI, 0, 4)>, //SDIO
-                    <NRF_PSEL(SPIM_MISO, 0, 4)>; //SDIO
-            low-power-enable;
-        };
-    };
-};
-
-#include <zephyr/dt-bindings/input/input-event-codes.h>
-
-&spi0 {
-    status = "okay";
-    compatible = "nordic,nrf-spim";
-    pinctrl-0 = <&spi0_default>;
-    pinctrl-1 = <&spi0_sleep>;
-    pinctrl-names = "default", "sleep";
-    cs-gpios = <&xiao_d 9 GPIO_ACTIVE_LOW>; //NCS
-
-    trackball: trackball@0 {
-        status = "okay";
-        compatible = "pixart,pmw3610";
-        reg = <0>;
-        spi-max-frequency = <2000000>;
-        irq-gpios = <&xiao_d 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //MOT
-        //cpi = <800>;
-        //evt-type = <INPUT_EV_REL>;
-        //x-input-code = <INPUT_REL_X>;
-        //y-input-code = <INPUT_REL_Y>;
-        //automouse-layer = <4>;
-    };
-};
-
-&zip_temp_layer { // to AML
-    excluded-positions = <
-        6 // 'Y'
-        17 // 'H'
-        37 // CLICK
-        38 // ENTER
-        16 // Scroll
-    >;
-    require-prior-idle-ms = <200>; //キー入力から一定時間はAMLを発動しない
-};
 
 / {
-    trackball_listener {
-        status="okay";
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
 
-        input-processors = <&zip_temp_layer 4 10000>; // to AML
+    btn_scan: btn_scan {
+        compatible = "zmk,kscan-gpio-direct";
+        input-gpios =
+            <&xiao_d 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&xiao_d 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&xiao_d 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    };
+
+    btn_sideband: btn_sideband {
+        compatible = "zmk,kscan-sideband-behaviors";
+        kscan = <&btn_scan>;
+        auto-enable;
+        left_click {
+            row = <0>;
+            column = <0>;
+            bindings = <&mkp MB1>;
+        };
+        right_click {
+            row = <0>;
+            column = <1>;
+            bindings = <&mkp MB2>;
+        };
+        middle_click {
+            row = <0>;
+            column = <2>;
+            bindings = <&mkp MB3>;
+        };
     };
 };
